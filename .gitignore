@@ -1,0 +1,11 @@
+.ccls-cache
+
+obj
+System.map
+bbl
+toolchain
+
+proto/*.pb-c.c
+proto/*.pb-c.h
+
+compile_commands.json
