@@ -1,7 +1,7 @@
 # MCMQ
 
 ## Prerequisites
-Building MCMQ requires a RISC-V toolchain ([https://github.com/riscv/riscv-gnu-toolchain](riscv-gnu-toolchain)). It can be downloaded and built with:
+Building MCMQ requires a RISC-V toolchain ([riscv-gnu-toolchain](https://github.com/riscv/riscv-gnu-toolchain)). It can be downloaded and built with:
 ```sh
 export RISCV=$HOME/riscv
 git clone https://github.com/riscv/riscv-gnu-toolchain.git
@@ -35,4 +35,9 @@ make image
 This will create a `bbl` in the current directory. This is the compiled firmware with the bootloader which can be run with the virtual machine.
 
 ## Running the firmware
-To run the firmware, build and start the [https://github.com/abc70182984/mcmqhost](frontend driver) first.
+To run the firmware, build and start the [frontend driver](https://github.com/abc70182984/mcmqhost) first. After that, run:
+```sh
+make qemu
+```
+
+You should see the detailed configuration sent by the frontend driver in the virtual machine console if the firmware starts successfully.
